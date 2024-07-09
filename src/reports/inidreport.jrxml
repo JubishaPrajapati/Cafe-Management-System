@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="inidreport" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c4008773-dc0a-4486-8744-6dc3ce2b13fb">
+	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString>
+		<![CDATA[SELECT
+     sales.`saleid` AS sales_saleid,
+     sales.`INID` AS sales_INID,
+     sales.`Date` AS sales_Date,
+     sales.`Cid` AS sales_Cid,
+     sales.`Customer_Name` AS sales_Customer_Name,
+     sales.`Total_Qty` AS sales_Total_Qty,
+     sales.`Total_Bill` AS sales_Total_Bill,
+     sales.`Status` AS sales_Status,
+     sales.`Balance` AS sales_Balance,
+     sales.`Date` AS sales_Date
+FROM
+     `sales` sales]]>
+	</queryString>
+	<field name="sales_saleid" class="java.lang.Integer"/>
+	<field name="sales_INID" class="java.lang.Integer"/>
+	<field name="sales_Date" class="java.lang.String"/>
+	<field name="sales_Cid" class="java.lang.Integer"/>
+	<field name="sales_Customer_Name" class="java.lang.String"/>
+	<field name="sales_Total_Qty" class="java.lang.Integer"/>
+	<field name="sales_Total_Bill" class="java.lang.String"/>
+	<field name="sales_Status" class="java.lang.String"/>
+	<field name="sales_Balance" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="194" splitType="Stretch">
+			<image>
+				<reportElement x="312" y="0" width="200" height="192" uuid="e47e6b59-5877-4d80-847b-e828a8771fc7"/>
+				<imageExpression><![CDATA["guluz_logo.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement style="Title" x="0" y="57" width="299" height="55" uuid="2e3e5a28-0b38-49a4-8c08-aba6b52cd9aa"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Georgia" size="28"/>
+				</textElement>
+				<text><![CDATA[GULUZ CAFE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="118" y="112" width="181" height="26" forecolor="#CC3300" uuid="de3c0a65-e62e-4235-9364-0ef61a4649c0"/>
+				<textElement>
+					<font fontName="Georgia" size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA["Experience the great today" ]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="40" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1" uuid="cdf81c20-b6c6-455a-b961-83e6cfc92d1c"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="19" width="47" height="15" forecolor="#CC3300" uuid="6df7e507-54b5-422d-a6e4-705e426d72ac"/>
+				<textElement textAlignment="Center">
+					<font fontName="Georgia" size="10"/>
+				</textElement>
+				<text><![CDATA[Sale ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="48" y="19" width="37" height="15" forecolor="#CC3300" uuid="1e84db8a-573f-4277-a502-608604a068e5"/>
+				<textElement textAlignment="Center">
+					<font fontName="Georgia" size="10"/>
+				</textElement>
+				<text><![CDATA[INID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="85" y="19" width="33" height="15" forecolor="#CC3300" uuid="548a1628-3613-4061-92e2-6db23af2e922"/>
+				<textElement textAlignment="Center">
+					<font fontName="Georgia" size="10"/>
+				</textElement>
+				<text><![CDATA[Cid]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="201" y="19" width="102" height="15" forecolor="#CC3300" uuid="fb122509-e0a5-4480-86c1-c8038a9ceead"/>
+				<textElement textAlignment="Center">
+					<font fontName="Georgia" size="10"/>
+				</textElement>
+				<text><![CDATA[Customer_Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="303" y="19" width="55" height="15" forecolor="#CC3300" uuid="74dd583e-df08-4217-a353-9a93b8d54f37"/>
+				<textElement textAlignment="Center">
+					<font fontName="Georgia" size="10"/>
+				</textElement>
+				<text><![CDATA[Total_Qty]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="358" y="19" width="75" height="15" forecolor="#CC3300" uuid="2af0bd45-57d2-4c7d-bc80-956bcea25bda"/>
+				<textElement textAlignment="Center">
+					<font fontName="Georgia" size="10"/>
+				</textElement>
+				<text><![CDATA[Total_Bill]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="433" y="19" width="59" height="15" forecolor="#CC3300" uuid="f2a7a874-dc6a-403b-8e6b-fa3f8280dbc0"/>
+				<textElement textAlignment="Center">
+					<font fontName="Georgia" size="10"/>
+				</textElement>
+				<text><![CDATA[Status]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="492" y="19" width="63" height="15" forecolor="#CC3300" uuid="349cdcbc-a7c6-4ab7-aefc-99010ca41675"/>
+				<textElement textAlignment="Center">
+					<font fontName="Georgia" size="10"/>
+				</textElement>
+				<text><![CDATA[Balance]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="7" width="553" height="1" forecolor="#666666" uuid="9c1c2ce3-29bc-4647-94a7-1aa57b3b988f"/>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="118" y="19" width="83" height="15" forecolor="#CC3300" uuid="fe7ec8b3-17e2-497f-90b5-fd79f70fe996"/>
+				<textElement textAlignment="Center">
+					<font fontName="Georgia" size="10"/>
+				</textElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="23" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="dc3f2e7a-7b7f-4f36-a9be-c65b07efa1bb"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="Detail" x="0" y="0" width="47" height="15" uuid="15d0896b-d48c-4d99-9693-146b1a9e509b"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{sales_saleid}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="48" y="0" width="37" height="15" uuid="d7dec2f4-612a-4849-9a6c-bc504e121a78"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{sales_INID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="85" y="0" width="33" height="15" uuid="73fd41bc-d2e6-4225-bdc5-4705308a7a5b"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{sales_Cid}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="303" y="0" width="55" height="15" uuid="5f0df7ba-d1f8-44b5-8b1c-886d0defec96"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{sales_Total_Qty}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="358" y="0" width="75" height="15" uuid="8bd64229-e012-46cf-8d53-b3230e6503fc"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{sales_Total_Bill}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="434" y="0" width="58" height="15" uuid="e02cd164-387f-4bf3-a3fe-783099269549"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{sales_Status}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="118" y="0" width="79" height="15" uuid="e7ffa84f-8b4b-4acd-bf3e-d32371cb71a2"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{sales_Date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="201" y="0" width="102" height="15" uuid="e7ebbc7f-74e1-4f88-8ce8-cd75ad2c3097"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{sales_Customer_Name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="492" y="0" width="64" height="15" uuid="3b899d33-7bae-4f0a-b846-700fdc52c366"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{sales_Balance}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="9f6680e4-9629-4f68-81a3-da128df33ac5"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="e5d86d08-4a11-42dd-b358-6a715f406087"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="f0bd3c43-ec06-4e29-a811-fe70d3949b16"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="80d247e0-4eea-45b4-b15c-bff2a3a889f4"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
